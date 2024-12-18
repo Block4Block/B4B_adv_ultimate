@@ -1,0 +1,13 @@
+name: B4BAdvancements
+main: hasjamon.b4badvancements.project.B4BAdvancements
+api-version: 1.21
+authors: [ HasJamOn, Bahm ]
+depend: [Block4Block, UltimateAdvancementAPI]
+softdepend: [ProtocolLib, Pay4PlayersAPI]
+version: 4.0
+description: Advancements addon for the Block4Block plugin
+commands:
+  givepoints:
+    description: Tranfers x points to a player.
+    usage: /<command> player amount
+    permission: console

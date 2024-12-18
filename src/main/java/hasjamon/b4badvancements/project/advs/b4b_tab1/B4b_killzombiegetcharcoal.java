@@ -1,0 +1,19 @@
+package hasjamon.b4badvancements.project.advs.b4b_tab1;
+
+import com.fren_gor.ultimateAdvancementAPI.util.AdvancementKey;
+import hasjamon.b4badvancements.project.advs.AdvancementTabNamespaces;
+import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementDisplay;
+import com.fren_gor.ultimateAdvancementAPI.advancement.BaseAdvancement;
+import org.bukkit.Material;
+import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementFrameType;
+import com.fren_gor.ultimateAdvancementAPI.advancement.Advancement;
+
+public class B4b_killzombiegetcharcoal extends BaseAdvancement  {
+
+  public static AdvancementKey KEY = new AdvancementKey(AdvancementTabNamespaces.b4b_tab1_NAMESPACE, "charcoal3");
+
+
+  public B4b_killzombiegetcharcoal(Advancement parent) {
+    super(KEY.getKey(), new AdvancementDisplay(Material.CHARCOAL, "charcoal3", AdvancementFrameType.TASK, true, true, 1f, 1f ), parent, 1);
+  }
+}
