@@ -5,16 +5,22 @@ import com.fren_gor.ultimateAdvancementAPI.UltimateAdvancementAPI;
 import com.fren_gor.ultimateAdvancementAPI.advancement.RootAdvancement;
 import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementDisplay;
 import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementFrameType;
+import com.fren_gor.ultimateAdvancementAPI.events.PlayerLoadingCompletedEvent;
 import hasjamon.b4badvancements.project.advs.AdvancementTabNamespaces;
 import hasjamon.b4badvancements.project.advs.b4b_tab1.*;
 import hasjamon.b4badvancements.project.advs.b4b_tab2.*;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class B4BAdvancements extends JavaPlugin {
+public class B4BAdvancements extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+        Bukkit.getPluginManager().registerEvents(this, this);
         initializeTabs();
     }
 
@@ -117,6 +123,15 @@ public class B4BAdvancements extends JavaPlugin {
             B4b_copymasterbookcopy b4b_copymasterbookcopy = new B4b_copymasterbookcopy(b4b_copymasterbook);
             B4b_putmasterbookinenderchest b4b_putmasterbookinenderchest = new B4b_putmasterbookinenderchest(b4b_copymasterbookcopy);
         b4b_tab2.registerAdvancements(b4b_breakblockfailbutfreeinclaim ,b4b_pickupsugarcane ,b4b_makepaper ,b4b_makebook ,b4b_makelectern ,b4b_makewritablebook ,b4b_claimchunk ,b4b_claimcontestchunk ,b4b_winclaimcontest ,b4b_breakinclaim ,b4b_protectclaimfromallsides ,b4b_protectclaimwithgravityblock ,b4b_buildirongolem ,b4b_loseclaimwhileoffline ,b4b_failblockplaceinclaim ,b4b_removeclaim ,b4b_createclaimmap ,b4b_claim5chunks ,b4b_claim25chunks ,b4b_claim50chunks ,b4b_claim100chunks ,b4b_claim250chunks ,b4b_claim500chunks ,b4b_claim1000chunks ,b4b_claim10000chunks ,b4b_claim100000chunks ,b4b_intruderalert ,b4b_createmasterbook ,b4b_copymasterbook ,b4b_copymasterbookcopy ,b4b_putmasterbookinenderchest );
+    }
+
+    @EventHandler
+    public void onJoin(PlayerLoadingCompletedEvent e) {
+        // Called after a player has successfully been loaded by the API
+        Player p = e.getPlayer();
+        // Here you can show tabs to players
+        b4b_tab1.showTab(p);
+        b4b_tab2.showTab(p);
     }
 
 }
