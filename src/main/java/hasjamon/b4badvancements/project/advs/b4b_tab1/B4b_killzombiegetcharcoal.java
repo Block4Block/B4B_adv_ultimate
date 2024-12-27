@@ -10,10 +10,10 @@ import com.fren_gor.ultimateAdvancementAPI.advancement.Advancement;
 
 public class B4b_killzombiegetcharcoal extends BaseAdvancement  {
 
-  public static AdvancementKey KEY = new AdvancementKey(AdvancementTabNamespaces.b4b_tab1_NAMESPACE, "charcoal3");
+  public static AdvancementKey KEY = new AdvancementKey(AdvancementTabNamespaces.b4b_tab1_NAMESPACE, "b4b_killzombiegetcharcoal");
 
 
   public B4b_killzombiegetcharcoal(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.CHARCOAL, "charcoal3", AdvancementFrameType.TASK, true, true, 1f, 1f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.CHARCOAL, "Wooden Brain", AdvancementFrameType.TASK, true, true, 1f, 1f ), parent, 1);
   }
 }
