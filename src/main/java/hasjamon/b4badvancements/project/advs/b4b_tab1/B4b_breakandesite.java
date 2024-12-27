@@ -7,6 +7,8 @@ import com.fren_gor.ultimateAdvancementAPI.advancement.BaseAdvancement;
 import org.bukkit.Material;
 import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementFrameType;
 import com.fren_gor.ultimateAdvancementAPI.advancement.Advancement;
+import org.bukkit.entity.Player;
+import org.bukkit.event.block.BlockBreakEvent;
 
 public class B4b_breakandesite extends BaseAdvancement  {
 
@@ -15,5 +17,12 @@ public class B4b_breakandesite extends BaseAdvancement  {
 
   public B4b_breakandesite(Advancement parent) {
     super(KEY.getKey(), new AdvancementDisplay(Material.ANDESITE, "And The Side", AdvancementFrameType.TASK, true, true, 5f, 5f , "Surrounding Andesite blocks fracture when breaking Andesite."), parent, 1);
+    registerEvent(BlockBreakEvent.class, (e)-> {
+      Player p = e.getPlayer();
+      if (e.getBlock().getType()== Material.ANDESITE) {
+
+        incrementProgression(p);
+      }
+    });
   }
 }
