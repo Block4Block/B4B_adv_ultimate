@@ -14,6 +14,6 @@ public class B4b_killskeletongetstone extends BaseAdvancement  {
 
 
   public B4b_killskeletongetstone(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.STONE, "b4b_killskeletongetstone", AdvancementFrameType.TASK, true, true, 2f, 3f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.STONE, "Bones Made of Stone", AdvancementFrameType.TASK, true, true, 2f, 3f, "Obtain stone from a Skeleton."), parent, 1);
   }
 }

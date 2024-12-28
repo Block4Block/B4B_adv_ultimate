@@ -14,6 +14,6 @@ public class B4b_makepaper extends BaseAdvancement  {
 
 
   public B4b_makepaper(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.PAPER, "b4b_makepaper", AdvancementFrameType.TASK, true, true, 2f, 0f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.PAPER, "Sugary Paper Craft", AdvancementFrameType.TASK, true, true, 2f, 0f, "Craft some Paper."), parent, 1);
   }
 }

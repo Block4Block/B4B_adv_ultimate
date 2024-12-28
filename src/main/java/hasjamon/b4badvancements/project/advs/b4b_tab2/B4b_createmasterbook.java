@@ -14,6 +14,6 @@ public class B4b_createmasterbook extends BaseAdvancement  {
 
 
   public B4b_createmasterbook(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.ENCHANTED_BOOK, "b4b_createmasterbook", AdvancementFrameType.TASK, true, true, 5f, 1f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.ENCHANTED_BOOK, "Master Book", AdvancementFrameType.TASK, true, true, 5f, 1f, "Sign your Claim Book to create a Master Book that updates its copies automatically."), parent, 1);
   }
 }

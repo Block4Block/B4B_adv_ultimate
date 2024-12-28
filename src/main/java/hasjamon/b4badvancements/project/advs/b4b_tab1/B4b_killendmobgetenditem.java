@@ -14,6 +14,6 @@ public class B4b_killendmobgetenditem extends BaseAdvancement  {
 
 
   public B4b_killendmobgetenditem(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.END_STONE, "b4b_killendmobgetenditem", AdvancementFrameType.TASK, true, true, 3f, 6f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.END_STONE, "End Game", AdvancementFrameType.TASK, true, true, 3f, 6f, "Obtain end stone or end rods from an End mob."), parent, 1);
   }
 }

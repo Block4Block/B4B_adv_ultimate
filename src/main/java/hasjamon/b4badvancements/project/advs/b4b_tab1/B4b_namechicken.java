@@ -14,6 +14,6 @@ public class B4b_namechicken extends BaseAdvancement  {
 
 
   public B4b_namechicken(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.NAME_TAG, "b4b_namechicken", AdvancementFrameType.TASK, true, true, 4f, 13f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.NAME_TAG, "Chicken Little", AdvancementFrameType.TASK, true, true, 4f, 13f, "Name a chicken to buff nearby chickens' chance to lay Spawn Eggs."), parent, 1);
   }
 }

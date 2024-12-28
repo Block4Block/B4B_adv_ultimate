@@ -14,6 +14,6 @@ public class B4b_creeperexplodegetgunpowder extends BaseAdvancement  {
 
 
   public B4b_creeperexplodegetgunpowder(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.GUNPOWDER, "b4b_creeperexplodegetgunpowder", AdvancementFrameType.TASK, true, true, 3f, 5f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.GUNPOWDER, "Creepy Remnants", AdvancementFrameType.TASK, true, true, 3f, 5f, "Pick up gunpowder after a creeper explodes."), parent, 1);
   }
 }

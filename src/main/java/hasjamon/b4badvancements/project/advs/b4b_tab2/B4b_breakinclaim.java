@@ -14,6 +14,6 @@ public class B4b_breakinclaim extends BaseAdvancement  {
 
 
   public B4b_breakinclaim(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.RED_BANNER, "b4b_breakinclaim", AdvancementFrameType.TASK, true, true, 6f, 1f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.RED_BANNER, "Reclaimed Rights", AdvancementFrameType.TASK, true, true, 6f, 1f, "Some blocks are free to break, if you have a claim. In this case, you do."), parent, 1);
   }
 }

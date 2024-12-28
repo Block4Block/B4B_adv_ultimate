@@ -14,6 +14,6 @@ public class B4b_killraidergetclay extends BaseAdvancement  {
 
 
   public B4b_killraidergetclay(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.CLAY, "b4b_killraidergetclay", AdvancementFrameType.TASK, true, true, 3f, 10f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.CLAY, "Clayment", AdvancementFrameType.TASK, true, true, 3f, 10f, "Obtain clay from a Pillager, Ravager, Vindicator, Evoker, or Vex."), parent, 1);
   }
 }

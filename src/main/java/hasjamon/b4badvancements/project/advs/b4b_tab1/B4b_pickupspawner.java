@@ -14,6 +14,6 @@ public class B4b_pickupspawner extends BaseAdvancement  {
 
 
   public B4b_pickupspawner(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.SPAWNER, "b4b_pickupspawner", AdvancementFrameType.TASK, true, true, 4f, 9f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.SPAWNER, "Spawner of Mobs", AdvancementFrameType.TASK, true, true, 4f, 9f, "Use a pickaxe to break a Spawner and pick it up."), parent, 1);
   }
 }

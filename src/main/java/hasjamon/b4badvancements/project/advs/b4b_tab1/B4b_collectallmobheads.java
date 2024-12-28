@@ -14,6 +14,6 @@ public class B4b_collectallmobheads extends BaseAdvancement  {
 
 
   public B4b_collectallmobheads(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.WITHER_SKELETON_SKULL, "b4b_collectallmobheads", AdvancementFrameType.TASK, true, true, 4f, 8f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.WITHER_SKELETON_SKULL, "Mob Boss", AdvancementFrameType.TASK, true, true, 4f, 8f, "Collect all mob heads and skulls."), parent, 1);
   }
 }

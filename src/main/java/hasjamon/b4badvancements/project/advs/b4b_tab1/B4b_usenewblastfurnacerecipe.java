@@ -8,12 +8,12 @@ import org.bukkit.Material;
 import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementFrameType;
 import com.fren_gor.ultimateAdvancementAPI.advancement.Advancement;
 
-public class B4b_helpcmd extends BaseAdvancement  {
+public class B4b_usenewblastfurnacerecipe extends BaseAdvancement  {
 
-  public static AdvancementKey KEY = new AdvancementKey(AdvancementTabNamespaces.b4b_tab1_NAMESPACE, "b4b_helpcmd");
+  public static AdvancementKey KEY = new AdvancementKey(AdvancementTabNamespaces.b4b_tab1_NAMESPACE, "b4b_usenewblastfurnacerecipe");
 
 
-  public B4b_helpcmd(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.GLASS_PANE, "b4b_helpcmd", AdvancementFrameType.TASK, true, true, 2f, 6f ), parent, 1);
+  public B4b_usenewblastfurnacerecipe(Advancement parent) {
+    super(KEY.getKey(), new AdvancementDisplay(Material.BLAST_FURNACE, "Stone Blaster", AdvancementFrameType.TASK, true, true, 5f, 11f, "Smelt Cobblestone or Cobbled Deepslate using a Blast Furnace."), parent, 1);
   }
 }

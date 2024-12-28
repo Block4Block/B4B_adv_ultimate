@@ -14,6 +14,6 @@ public class B4b_killzombiegetcharcoal extends BaseAdvancement  {
 
 
   public B4b_killzombiegetcharcoal(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.CHARCOAL, "Wooden Brain", AdvancementFrameType.TASK, true, true, 1f, 1f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.CHARCOAL, "Wooden Brain", AdvancementFrameType.TASK, true, true, 1f, 1f, "Obtain Charcoal form a Zombie."), parent, 1);
   }
 }

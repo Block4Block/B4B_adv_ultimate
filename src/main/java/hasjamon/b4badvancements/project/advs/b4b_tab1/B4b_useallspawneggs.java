@@ -14,6 +14,6 @@ public class B4b_useallspawneggs extends BaseAdvancement  {
 
 
   public B4b_useallspawneggs(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.CHICKEN_SPAWN_EGG, "b4b_useallspawneggs", AdvancementFrameType.TASK, true, true, 7f, 14f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.CHICKEN_SPAWN_EGG, "Egghead Eggtraordinaire", AdvancementFrameType.TASK, true, true, 7f, 14f, "Use each type of spawn egg at least once."), parent, 1);
   }
 }

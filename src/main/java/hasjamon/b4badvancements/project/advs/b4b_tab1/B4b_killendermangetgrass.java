@@ -14,6 +14,6 @@ public class B4b_killendermangetgrass extends BaseAdvancement  {
 
 
   public B4b_killendermangetgrass(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.GRASS_BLOCK, "b4b_killendermangetgrass", AdvancementFrameType.TASK, true, true, 3f, 15f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.GRASS_BLOCK, "Helping Hand", AdvancementFrameType.TASK, true, true, 3f, 15f, "Obtain a grass block from an Enderman."), parent, 1);
   }
 }

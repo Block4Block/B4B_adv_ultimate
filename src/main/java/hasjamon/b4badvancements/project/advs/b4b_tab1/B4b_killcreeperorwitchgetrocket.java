@@ -14,6 +14,6 @@ public class B4b_killcreeperorwitchgetrocket extends BaseAdvancement  {
 
 
   public B4b_killcreeperorwitchgetrocket(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.FIREWORK_ROCKET, "b4b_killcreeperorwitchgetrocket", AdvancementFrameType.TASK, true, true, 2f, 2f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.FIREWORK_ROCKET, "Rocketpowered Creeps", AdvancementFrameType.TASK, true, true, 2f, 2f, "Obtain a Rocket from a Creeper or a Witch."), parent, 1);
   }
 }

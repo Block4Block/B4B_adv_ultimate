@@ -14,6 +14,6 @@ public class B4b_standcenterend extends BaseAdvancement  {
 
 
   public B4b_standcenterend(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.GOLDEN_BOOTS, "b4b_standcenterend", AdvancementFrameType.TASK, true, true, 4f, 15f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.GOLDEN_BOOTS, "Origin of The Big Bang", AdvancementFrameType.TASK, true, true, 4f, 15f, "Travel to the center of the End."), parent, 1);
   }
 }

@@ -72,10 +72,10 @@ public class B4BAdvancements extends JavaPlugin implements Listener {
             B4b_lootobsidian b4b_lootobsidian = new B4b_lootobsidian(b4b_placeskeletonspawner);
             B4b_lotsofcobblestone b4b_lotsofcobblestone = new B4b_lotsofcobblestone(b4b_breakstone);
             B4b_smeltcobblestone b4b_smeltcobblestone = new B4b_smeltcobblestone(b4b_breakstone);
-            B4b_usenewblastfurnacerecipeadvancement b4b_usenewblastfurnacerecipeadvancement = new B4b_usenewblastfurnacerecipeadvancement(b4b_smeltcobblestone);
+            B4b_usenewblastfurnacerecipe b4b_usenewblastfurnacerecipe = new B4b_usenewblastfurnacerecipe(b4b_smeltcobblestone);
             B4b_pickupfallingblock b4b_pickupfallingblock = new B4b_pickupfallingblock(b4b_killpiggetdirt);
             B4b_breakdirt b4b_breakdirt = new B4b_breakdirt(b4b_killpiggetdirt);
-            B4b_helpcmd b4b_helpcmd = new B4b_helpcmd(b4b_killpiggetdirt);
+            B4b_bedcmd b4b_bedcmd = new B4b_bedcmd(b4b_killpiggetdirt);
             B4b_standcenteroverworld b4b_standcenteroverworld = new B4b_standcenteroverworld(b4b_killpiggetdirt);
             B4b_killendermangetgrass b4b_killendermangetgrass = new B4b_killendermangetgrass(b4b_killpiggetdirt);
             B4b_killraidergetclay b4b_killraidergetclay = new B4b_killraidergetclay(b4b_pickupfallingblock);
@@ -87,10 +87,9 @@ public class B4BAdvancements extends JavaPlugin implements Listener {
             B4b_pickupsuperrarespawnegg b4b_pickupsuperrarespawnegg = new B4b_pickupsuperrarespawnegg(b4b_pickuprarespawnegg);
             B4b_spawnzombiehorse b4b_spawnzombiehorse = new B4b_spawnzombiehorse(b4b_pickupsuperrarespawnegg);
             B4b_useallspawneggs b4b_useallspawneggs = new B4b_useallspawneggs(b4b_spawnzombiehorse);
-            B4b_bedcmd b4b_bedcmd = new B4b_bedcmd(b4b_helpcmd);
             B4b_standcenternether b4b_standcenternether = new B4b_standcenternether(b4b_standcenteroverworld);
             B4b_standcenterend b4b_standcenterend = new B4b_standcenterend(b4b_standcenternether);
-        b4b_tab1.registerAdvancements(b4b_breakblockfail ,b4b_breaklogsfreely ,b4b_killzombiegetcharcoal ,b4b_breakwithingraceperiod ,b4b_killpiggetdirt ,b4b_pickflower ,b4b_fishgetspawnegg ,b4b_killpolarbeargetice ,b4b_pickallflowers ,b4b_pickupmelonslice ,b4b_fishgetrarestuff ,b4b_killmooshroomgetstuff ,b4b_killphantomgetelytra ,b4b_pickcraftalldyes ,b4b_pickuppumpkin ,b4b_pickupcactus ,b4b_breakleavesfreely ,b4b_breakcraftingtablefreely ,b4b_breakbedfreely ,b4b_breaknyliumfreely ,b4b_spreadnylium ,b4b_placeslimespawner ,b4b_breakandesite ,b4b_pickupvaluablerandomdrop ,b4b_killcreeperorwitchgetrocket ,b4b_killskeletongetstone ,b4b_creeperexplodegetgunpowder ,b4b_killendmobgetenditem ,b4b_collectmobhead ,b4b_killwitherskeletongetblackstone ,b4b_breakstone ,b4b_pickupplayerhead ,b4b_collectallmobheads ,b4b_pickupallmobheads ,b4b_disguise ,b4b_pickupspawner ,b4b_placeskeletonspawner ,b4b_lootobsidian ,b4b_lotsofcobblestone ,b4b_smeltcobblestone ,b4b_usenewblastfurnacerecipeadvancement ,b4b_pickupfallingblock ,b4b_breakdirt ,b4b_helpcmd ,b4b_standcenteroverworld ,b4b_killraidergetclay ,b4b_pickupflint ,b4b_pickupspawnegg ,b4b_hitdripstonewithtrident ,b4b_namechicken ,b4b_pickuprarespawnegg ,b4b_pickupsuperrarespawnegg ,b4b_spawnzombiehorse ,b4b_useallspawneggs ,b4b_bedcmd ,b4b_standcenternether ,b4b_standcenterend ,b4b_killendermangetgrass );
+        b4b_tab1.registerAdvancements(b4b_breakblockfail ,b4b_breaklogsfreely ,b4b_killzombiegetcharcoal ,b4b_breakwithingraceperiod ,b4b_killpiggetdirt ,b4b_pickflower ,b4b_fishgetspawnegg ,b4b_killpolarbeargetice ,b4b_pickallflowers ,b4b_pickupmelonslice ,b4b_fishgetrarestuff ,b4b_killmooshroomgetstuff ,b4b_killphantomgetelytra ,b4b_pickcraftalldyes ,b4b_pickuppumpkin ,b4b_pickupcactus ,b4b_breakleavesfreely ,b4b_breakcraftingtablefreely ,b4b_breakbedfreely ,b4b_breaknyliumfreely ,b4b_spreadnylium ,b4b_placeslimespawner ,b4b_breakandesite ,b4b_pickupvaluablerandomdrop ,b4b_killcreeperorwitchgetrocket ,b4b_killskeletongetstone ,b4b_creeperexplodegetgunpowder ,b4b_killendmobgetenditem ,b4b_collectmobhead ,b4b_killwitherskeletongetblackstone ,b4b_breakstone ,b4b_pickupplayerhead ,b4b_collectallmobheads ,b4b_pickupallmobheads ,b4b_disguise ,b4b_pickupspawner ,b4b_placeskeletonspawner ,b4b_lootobsidian ,b4b_lotsofcobblestone ,b4b_smeltcobblestone ,b4b_usenewblastfurnacerecipe ,b4b_pickupfallingblock ,b4b_breakdirt ,b4b_standcenteroverworld ,b4b_killraidergetclay ,b4b_pickupflint ,b4b_pickupspawnegg ,b4b_hitdripstonewithtrident ,b4b_namechicken ,b4b_pickuprarespawnegg ,b4b_pickupsuperrarespawnegg ,b4b_spawnzombiehorse ,b4b_useallspawneggs ,b4b_bedcmd ,b4b_standcenternether ,b4b_standcenterend ,b4b_killendermangetgrass );
             RootAdvancement b4b_breakblockfailbutfreeinclaim = new RootAdvancement(b4b_tab2, "b4b_breakblockfailbutfreeinclaim", new AdvancementDisplay(Material.ENCHANTED_BOOK, "Unclaimed Property", AdvancementFrameType.TASK, true, true, 0f, 0f , "Some blocks are free to break, if you have a claim. In this case, you do not."),"textures/block/red_terracotta.png",1);
             B4b_pickupsugarcane b4b_pickupsugarcane = new B4b_pickupsugarcane(b4b_breakblockfailbutfreeinclaim);
             B4b_makepaper b4b_makepaper = new B4b_makepaper(b4b_pickupsugarcane);
@@ -109,7 +108,8 @@ public class B4BAdvancements extends JavaPlugin implements Listener {
             B4b_removeclaim b4b_removeclaim = new B4b_removeclaim(b4b_failblockplaceinclaim);
             B4b_createclaimmap b4b_createclaimmap = new B4b_createclaimmap(b4b_claimchunk);
             B4b_claim5chunks b4b_claim5chunks = new B4b_claim5chunks(b4b_claimchunk);
-            B4b_claim25chunks b4b_claim25chunks = new B4b_claim25chunks(b4b_claim5chunks);
+            B4b_claim10chunks b4b_claim10chunks = new B4b_claim10chunks(b4b_claim5chunks);
+            B4b_claim25chunks b4b_claim25chunks = new B4b_claim25chunks(b4b_claim10chunks);
             B4b_claim50chunks b4b_claim50chunks = new B4b_claim50chunks(b4b_claim25chunks);
             B4b_claim100chunks b4b_claim100chunks = new B4b_claim100chunks(b4b_claim50chunks);
             B4b_claim250chunks b4b_claim250chunks = new B4b_claim250chunks(b4b_claim100chunks);

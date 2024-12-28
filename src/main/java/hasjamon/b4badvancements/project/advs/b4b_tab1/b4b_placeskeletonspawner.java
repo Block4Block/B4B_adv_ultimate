@@ -14,6 +14,6 @@ public class b4b_placeskeletonspawner extends BaseAdvancement  {
 
 
   public b4b_placeskeletonspawner(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.SKELETON_SKULL, "b4b_placeskeletonspawner", AdvancementFrameType.TASK, true, true, 5f, 9f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.SKELETON_SKULL, "Stone Fabricator", AdvancementFrameType.TASK, true, true, 5f, 9f, "Set up a stone generator by placing a skeleton spawner."), parent, 1);
   }
 }

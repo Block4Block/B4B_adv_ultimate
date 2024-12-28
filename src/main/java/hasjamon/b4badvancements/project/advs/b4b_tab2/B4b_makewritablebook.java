@@ -14,6 +14,6 @@ public class B4b_makewritablebook extends BaseAdvancement  {
 
 
   public B4b_makewritablebook(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.WRITABLE_BOOK, "b4b_makewritablebook", AdvancementFrameType.TASK, true, true, 4f, 1f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.WRITABLE_BOOK, "Write a Book", AdvancementFrameType.TASK, true, true, 4f, 1f, "Craft a Book & Quill."), parent, 1);
   }
 }

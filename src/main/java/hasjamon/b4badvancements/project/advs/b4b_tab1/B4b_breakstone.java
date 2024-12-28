@@ -14,6 +14,6 @@ public class B4b_breakstone extends BaseAdvancement  {
 
 
   public B4b_breakstone(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.STONE_PICKAXE, "b4b_breakstone", AdvancementFrameType.TASK, true, true, 3f, 9f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.STONE_PICKAXE, "Stonebreaker", AdvancementFrameType.TASK, true, true, 3f, 9f, "Successfully break stone by spending a stone block from your hotbar."), parent, 1);
   }
 }

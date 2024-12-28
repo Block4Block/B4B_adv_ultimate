@@ -14,6 +14,6 @@ public class B4b_lootobsidian extends BaseAdvancement  {
 
 
   public B4b_lootobsidian(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.OBSIDIAN, "b4b_lootobsidian", AdvancementFrameType.TASK, true, true, 6f, 9f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.OBSIDIAN, "Obsidian Obtainer", AdvancementFrameType.TASK, true, true, 6f, 9f, "Grab Obsidian from a chest. (Can be found near unfinished portals)"), parent, 1);
   }
 }

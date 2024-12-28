@@ -14,6 +14,6 @@ public class B4b_pickupflint extends BaseAdvancement  {
 
 
   public B4b_pickupflint(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.FLINT, "b4b_pickupflint", AdvancementFrameType.TASK, true, true, 3f, 11f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.FLINT, "Falling Flint", AdvancementFrameType.TASK, true, true, 3f, 11f, "Obtain Flint from breaking falling gravel."), parent, 1);
   }
 }

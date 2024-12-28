@@ -14,6 +14,6 @@ public class B4b_spawnzombiehorse extends BaseAdvancement  {
 
 
   public B4b_spawnzombiehorse(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.CREEPER_SPAWN_EGG, "b4b_spawnzombiehorse", AdvancementFrameType.TASK, true, true, 6f, 14f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.CREEPER_SPAWN_EGG, "Zemgg", AdvancementFrameType.TASK, true, true, 6f, 14f, "Spawn a Zombie Horse."), parent, 1);
   }
 }

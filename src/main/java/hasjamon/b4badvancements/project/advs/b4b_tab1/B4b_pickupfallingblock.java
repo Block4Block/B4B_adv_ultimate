@@ -14,6 +14,6 @@ public class B4b_pickupfallingblock extends BaseAdvancement  {
 
 
   public B4b_pickupfallingblock(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.SAND, "b4b_pickupfallingblock", AdvancementFrameType.TASK, true, true, 2f, 4f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.SAND, "Torching Gravity", AdvancementFrameType.TASK, true, true, 2f, 4f, "Pick up a falling block after indirectly breaking it."), parent, 1);
   }
 }

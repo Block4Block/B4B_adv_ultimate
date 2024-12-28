@@ -14,6 +14,6 @@ public class B4b_smeltcobblestone extends BaseAdvancement  {
 
 
   public B4b_smeltcobblestone(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.FURNACE, "b4b_smeltcobblestone", AdvancementFrameType.TASK, true, true, 4f, 11f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.FURNACE, "Stone Cobbler", AdvancementFrameType.TASK, true, true, 4f, 11f, "Smelt cobblestone back into stone using a furnace."), parent, 1);
   }
 }

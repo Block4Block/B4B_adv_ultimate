@@ -14,6 +14,6 @@ public class B4b_makelectern extends BaseAdvancement  {
 
 
   public B4b_makelectern(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.BOOKSHELF, "b4b_makelectern", AdvancementFrameType.TASK, true, true, 4f, 0f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.BOOKSHELF, "Lectern Lecture", AdvancementFrameType.TASK, true, true, 4f, 0f, "Craft a Lectern."), parent, 1);
   }
 }

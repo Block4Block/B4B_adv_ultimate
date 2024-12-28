@@ -14,6 +14,6 @@ public class B4b_pickupsugarcane extends BaseAdvancement  {
 
 
   public B4b_pickupsugarcane(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.SUGAR_CANE, "b4b_pickupsugarcane", AdvancementFrameType.TASK, true, true, 1f, 0f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.SUGAR_CANE, "Sweet Dreams", AdvancementFrameType.TASK, true, true, 1f, 0f, "Sugar Cane is the first step towards claiming land!"), parent, 1);
   }
 }

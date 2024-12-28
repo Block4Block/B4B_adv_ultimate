@@ -14,6 +14,6 @@ public class B4b_killwitherskeletongetblackstone extends BaseAdvancement  {
 
 
   public B4b_killwitherskeletongetblackstone(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.BLACKSTONE, "b4b_killwitherskeletongetblackstone", AdvancementFrameType.TASK, true, true, 3f, 8f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.BLACKSTONE, "Withered Stone", AdvancementFrameType.TASK, true, true, 3f, 8f, "Obtain Blackstone from a Wither Skeleton."), parent, 1);
   }
 }

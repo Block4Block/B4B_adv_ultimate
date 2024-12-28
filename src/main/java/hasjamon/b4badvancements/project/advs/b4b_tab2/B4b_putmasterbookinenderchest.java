@@ -14,6 +14,6 @@ public class B4b_putmasterbookinenderchest extends BaseAdvancement  {
 
 
   public B4b_putmasterbookinenderchest(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.ENDER_CHEST, "b4b_putmasterbookinenderchest", AdvancementFrameType.TASK, true, true, 8f, 8f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.ENDER_CHEST, "Safekeeping", AdvancementFrameType.TASK, true, true, 8f, 8f, "Put an original Master Book in an Ender Chest."), parent, 1);
   }
 }

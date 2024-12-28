@@ -14,6 +14,6 @@ public class B4b_protectclaimfromallsides extends BaseAdvancement  {
 
 
   public B4b_protectclaimfromallsides(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.COMPASS, "b4b_protectclaimfromallsides", AdvancementFrameType.TASK, true, true, 6f, 2f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.COMPASS, "Cardinal Point Defense", AdvancementFrameType.TASK, true, true, 6f, 2f, "Protect a Claim Lectern from all \" + numProtectiveBlockFaces + \" directions."), parent, 1);
   }
 }

@@ -14,6 +14,6 @@ public class B4b_claim25chunks extends BaseAdvancement  {
 
 
   public B4b_claim25chunks(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.COBBLESTONE_WALL, "b4b_claim25chunks", AdvancementFrameType.TASK, true, true, 7f, 6f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.COBBLESTONE_WALL, "Feudal Lord", AdvancementFrameType.TASK, true, true, 7f, 6f, "Own 25 claims."), parent, 1);
   }
 }

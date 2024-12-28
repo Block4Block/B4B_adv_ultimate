@@ -14,6 +14,6 @@ public class B4b_lotsofcobblestone extends BaseAdvancement  {
 
 
   public B4b_lotsofcobblestone(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.DIAMOND_PICKAXE, "b4b_lotsofcobblestone", AdvancementFrameType.TASK, true, true, 4f, 10f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.DIAMOND_PICKAXE, "Speedy Stonebreaker", AdvancementFrameType.TASK, true, true, 4f, 10f, "Equip a diamond or netherite pickaxe and have 5 full stacks of cobblestone."), parent, 1);
   }
 }

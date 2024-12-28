@@ -14,6 +14,6 @@ public class B4b_pickupsuperrarespawnegg extends BaseAdvancement  {
 
 
   public B4b_pickupsuperrarespawnegg(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.ELDER_GUARDIAN_SPAWN_EGG, "b4b_pickupsuperrarespawnegg", AdvancementFrameType.TASK, true, true, 5f, 14f ), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.ELDER_GUARDIAN_SPAWN_EGG, "Eggstraordinarily Eggstatic!", AdvancementFrameType.TASK, true, true, 5f, 14f, "Pick up a super rare spawn egg laid by a chicken."), parent, 1);
   }
 }
