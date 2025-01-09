@@ -41,9 +41,7 @@ public class B4b_pickflower extends BaseAdvancement {
       if (event.getEntity() instanceof Player player) {
         ItemStack item = event.getItem().getItemStack();
 
-        // Check if the picked-up item is one of the flowers
         if (FLOWERS.contains(item.getType())) {
-          // Complete the advancement since only one flower is needed
           incrementProgression(player);
         }
       }
