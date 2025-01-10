@@ -18,10 +18,17 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class B4BAdvancements extends JavaPlugin implements Listener {
 
+    private static B4BAdvancements instance;
+
     @Override
     public void onEnable() {
+        instance = this; // Set the instance when the plugin is enabled
         Bukkit.getPluginManager().registerEvents(this, this);
         initializeTabs();
+    }
+
+    public static B4BAdvancements getInstance() {
+        return instance; // Provide access to the instance
     }
 
     public static UltimateAdvancementAPI api;
