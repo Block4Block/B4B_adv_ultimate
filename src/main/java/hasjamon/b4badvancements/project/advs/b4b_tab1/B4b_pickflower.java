@@ -37,6 +37,7 @@ public class B4b_pickflower extends BaseAdvancement {
 
   public B4b_pickflower(Advancement parent) {
     super(KEY.getKey(), new AdvancementDisplay(Material.POPPY, "Watering Flowers", AdvancementFrameType.TASK, true, true, 2f, 0f, "Pick up a flower. (Use a water bucket to break flowers)"), parent, 1);
+
     registerEvent(EntityPickupItemEvent.class, (event) -> {
       if (event.getEntity() instanceof Player player) {
         ItemStack item = event.getItem().getItemStack();
