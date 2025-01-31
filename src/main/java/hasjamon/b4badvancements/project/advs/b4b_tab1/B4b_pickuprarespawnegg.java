@@ -56,7 +56,7 @@ public class B4b_pickuprarespawnegg extends BaseAdvancement  {
   ));
 
   public B4b_pickuprarespawnegg(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.WANDERING_TRADER_SPAWN_EGG, "(UNTESTED)Eggcellent!", AdvancementFrameType.TASK, true, true, 4f, 14f, "Pick up a rare spawn egg laid by a chicken."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.WANDERING_TRADER_SPAWN_EGG, "Eggcellent!", AdvancementFrameType.TASK, true, true, 4f, 14f, "Pick up a rare spawn egg laid by a chicken."), parent, 1);
 
     registerEvent(EntityPickupItemEvent.class, (event) -> {
       if (event.getEntity() instanceof Player player) {
