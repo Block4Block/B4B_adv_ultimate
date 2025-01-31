@@ -14,6 +14,6 @@ public class B4b_claimcontestchunk extends BaseAdvancement  {
 
 
   public B4b_claimcontestchunk(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.IRON_HELMET, "Claim Contest Contender", AdvancementFrameType.TASK, true, true, 6f, 0f, "Lay claim to the current Claim Contest area. Good luck keeping it!"), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.IRON_HELMET, "(DISABLED)Claim Contest Contender", AdvancementFrameType.TASK, true, true, 6f, 0f, "Lay claim to the current Claim Contest area. Good luck keeping it!"), parent, 1);
   }
 }

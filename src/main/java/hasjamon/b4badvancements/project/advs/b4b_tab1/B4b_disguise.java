@@ -14,6 +14,6 @@ public class B4b_disguise extends BaseAdvancement  {
 
 
   public B4b_disguise(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.PLAYER_HEAD, "Head of Disguise", AdvancementFrameType.TASK, true, true, 5f, 7f, "Equip another player's head to look like them."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.PLAYER_HEAD, "(DISABLED)Head of Disguise", AdvancementFrameType.TASK, true, true, 5f, 7f, "Equip another player's head to look like them."), parent, 1);
   }
 }

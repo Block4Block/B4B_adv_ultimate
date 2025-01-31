@@ -14,6 +14,6 @@ public class B4b_loseclaimwhileoffline extends BaseAdvancement  {
 
 
   public B4b_loseclaimwhileoffline(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.MOJANG_BANNER_PATTERN, "Claim Down!", AdvancementFrameType.TASK, true, true, 6f, 3f, "Lose a claim or have your name removed from a master book while offline."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.MOJANG_BANNER_PATTERN, "(DISABLED)Claim Down!", AdvancementFrameType.TASK, true, true, 6f, 3f, "Lose a claim or have your name removed from a master book while offline."), parent, 1);
   }
 }

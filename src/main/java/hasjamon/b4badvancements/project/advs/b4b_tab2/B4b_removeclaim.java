@@ -14,6 +14,6 @@ public class B4b_removeclaim extends BaseAdvancement  {
 
 
   public B4b_removeclaim(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.WARPED_FENCE_GATE, "Annexation", AdvancementFrameType.TASK, true, true, 7f, 4f, "Steal the claim book or break the lectern of another player's claim."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.WARPED_FENCE_GATE, "(DISABLED)Annexation", AdvancementFrameType.TASK, true, true, 7f, 4f, "Steal the claim book or break the lectern of another player's claim."), parent, 1);
   }
 }

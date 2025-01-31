@@ -14,6 +14,6 @@ public class B4b_fishgetrarestuff extends BaseAdvancement  {
 
 
   public B4b_fishgetrarestuff(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.NAUTILUS_SHELL, "Exotic Fishing", AdvancementFrameType.TASK, true, true, 4f, 0f , "Catch a rare fishing reward."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.NAUTILUS_SHELL, "(DISABLED)Exotic Fishing", AdvancementFrameType.TASK, true, true, 4f, 0f , "Catch a rare fishing reward."), parent, 1);
   }
 }

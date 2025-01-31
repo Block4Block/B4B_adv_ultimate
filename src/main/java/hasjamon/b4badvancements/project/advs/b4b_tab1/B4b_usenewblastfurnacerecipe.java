@@ -14,6 +14,6 @@ public class B4b_usenewblastfurnacerecipe extends BaseAdvancement  {
 
 
   public B4b_usenewblastfurnacerecipe(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.BLAST_FURNACE, "Stone Blaster", AdvancementFrameType.TASK, true, true, 5f, 11f, "Smelt Cobblestone or Cobbled Deepslate using a Blast Furnace."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.BLAST_FURNACE, "(DISABLED)Stone Blaster", AdvancementFrameType.TASK, true, true, 5f, 11f, "Smelt Cobblestone or Cobbled Deepslate using a Blast Furnace."), parent, 1);
   }
 }

@@ -14,6 +14,6 @@ public class B4b_placeslimespawner extends BaseAdvancement  {
 
 
   public B4b_placeslimespawner(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.SLIME_BLOCK, "Cubical Conversion Therapy", AdvancementFrameType.TASK, true, true, 7f, 4f , "Turn a Magma Cube Spawner into a Slime Spawner by placing it in The Overworld."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.SLIME_BLOCK, "(DISABLED)Cubical Conversion Therapy", AdvancementFrameType.TASK, true, true, 7f, 4f , "Turn a Magma Cube Spawner into a Slime Spawner by placing it in The Overworld."), parent, 1);
   }
 }

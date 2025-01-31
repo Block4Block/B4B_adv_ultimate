@@ -19,7 +19,7 @@ public class B4b_killphantomgetelytra extends BaseAdvancement  {
 
 
   public B4b_killphantomgetelytra(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.ELYTRA, "Phantom Elytra", AdvancementFrameType.TASK, true, true, 5f, 1f , "Obtain a Phantom Elytra from a Phantom."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.ELYTRA, "(UNTESTED)Phantom Elytra", AdvancementFrameType.TASK, true, true, 5f, 1f , "Obtain a Phantom Elytra from a Phantom."), parent, 1);
 
     registerEvent(EntityDeathEvent.class, (event) -> {
       if (event.getEntity() instanceof Phantom) {

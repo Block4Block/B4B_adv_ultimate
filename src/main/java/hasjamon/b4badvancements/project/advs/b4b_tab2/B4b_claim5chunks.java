@@ -14,6 +14,6 @@ public class B4b_claim5chunks extends BaseAdvancement  {
 
 
   public B4b_claim5chunks(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.BIRCH_PLANKS, "House Owner", AdvancementFrameType.TASK, true, true, 6f, 6f, "Own 5 claims."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.BIRCH_PLANKS, "(DISABLED)House Owner", AdvancementFrameType.TASK, true, true, 6f, 6f, "Own 5 claims."), parent, 1);
   }
 }

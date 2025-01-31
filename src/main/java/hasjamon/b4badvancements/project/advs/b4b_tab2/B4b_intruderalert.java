@@ -14,6 +14,6 @@ public class B4b_intruderalert extends BaseAdvancement  {
 
 
   public B4b_intruderalert(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.MUSIC_DISC_STRAD, "Intruder Alert", AdvancementFrameType.TASK, true, true, 6f, 7f, "Be alerted of an intruder in one of your claims."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.MUSIC_DISC_STRAD, "(DISABLED)Intruder Alert", AdvancementFrameType.TASK, true, true, 6f, 7f, "Be alerted of an intruder in one of your claims."), parent, 1);
   }
 }

@@ -14,6 +14,6 @@ public class B4b_pickcraftalldyes extends BaseAdvancement  {
 
 
   public B4b_pickcraftalldyes(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.BROWN_DYE, "Mother's Tears", AdvancementFrameType.TASK, true, true, 4f, 2f , "Craft every craftable dye."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.BROWN_DYE, "(DISABLED)Mother's Tears", AdvancementFrameType.TASK, true, true, 4f, 2f , "Craft every craftable dye."), parent, 1);
   }
 }

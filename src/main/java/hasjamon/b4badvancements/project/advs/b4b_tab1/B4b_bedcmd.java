@@ -14,6 +14,6 @@ public class B4b_bedcmd extends BaseAdvancement  {
 
 
   public B4b_bedcmd(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.WHITE_BED, "Emergency Bed", AdvancementFrameType.TASK, true, true, 3f, 13f, "Write '/bed' in Chat for a free bed, available once a day"), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.WHITE_BED, "(DISABLED)Emergency Bed", AdvancementFrameType.TASK, true, true, 3f, 13f, "Write '/bed' in Chat for a free bed, available once a day"), parent, 1);
   }
 }

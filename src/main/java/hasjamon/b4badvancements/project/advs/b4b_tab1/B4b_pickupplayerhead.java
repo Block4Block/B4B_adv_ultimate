@@ -14,6 +14,6 @@ public class B4b_pickupplayerhead extends BaseAdvancement  {
 
 
   public B4b_pickupplayerhead(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.PLAYER_HEAD, "Headhunter", AdvancementFrameType.TASK, true, true, 4f, 7f, "Pick up another player's head."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.PLAYER_HEAD, "(DISABLED)Headhunter", AdvancementFrameType.TASK, true, true, 4f, 7f, "Pick up another player's head."), parent, 1);
   }
 }

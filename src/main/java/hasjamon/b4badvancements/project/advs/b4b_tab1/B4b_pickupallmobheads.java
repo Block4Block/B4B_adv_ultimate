@@ -14,6 +14,6 @@ public class B4b_pickupallmobheads extends BaseAdvancement  {
 
 
   public B4b_pickupallmobheads(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.DRAGON_HEAD, "Mob Master", AdvancementFrameType.TASK, true, true, 5f, 8f, "Obtain all mob heads by yourself; trade, theft, etc. don't count."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.DRAGON_HEAD, "(DISABLED)Mob Master", AdvancementFrameType.TASK, true, true, 5f, 8f, "Obtain all mob heads by yourself; trade, theft, etc. don't count."), parent, 1);
   }
 }

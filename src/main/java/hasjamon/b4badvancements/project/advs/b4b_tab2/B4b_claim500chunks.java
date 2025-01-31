@@ -14,6 +14,6 @@ public class B4b_claim500chunks extends BaseAdvancement  {
 
 
   public B4b_claim500chunks(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.NETHER_BRICK_WALL, "Marquess", AdvancementFrameType.TASK, true, true, 11f, 6f, "Own 500 claims."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.NETHER_BRICK_WALL, "(DISABLED)Marquess", AdvancementFrameType.TASK, true, true, 11f, 6f, "Own 500 claims."), parent, 1);
   }
 }

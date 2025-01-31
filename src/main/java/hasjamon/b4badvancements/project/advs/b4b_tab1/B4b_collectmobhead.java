@@ -14,6 +14,6 @@ public class B4b_collectmobhead extends BaseAdvancement  {
 
 
   public B4b_collectmobhead(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.SKELETON_SKULL, "Mobster", AdvancementFrameType.TASK, true, true, 3f, 7f, "Kill a mob and claim its head."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.SKELETON_SKULL, "(DISABLED)Mobster", AdvancementFrameType.TASK, true, true, 3f, 7f, "Kill a mob and claim its head."), parent, 1);
   }
 }

@@ -14,6 +14,6 @@ public class B4b_pickupvaluablerandomdrop extends BaseAdvancement  {
 
 
   public B4b_pickupvaluablerandomdrop(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.DIAMOND_BLOCK, "Extraordinary Luck", AdvancementFrameType.TASK, true, true, 6f, 1f , "You found something extraordinary from an unexpected source."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.DIAMOND_BLOCK, "(DISABLED)Extraordinary Luck", AdvancementFrameType.TASK, true, true, 6f, 1f , "You found something extraordinary from an unexpected source."), parent, 1);
   }
 }

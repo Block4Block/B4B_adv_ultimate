@@ -14,6 +14,6 @@ public class B4b_pickupspawnegg extends BaseAdvancement  {
 
 
   public B4b_pickupspawnegg(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.PIG_SPAWN_EGG, "Egguse me!?", AdvancementFrameType.TASK, true, true, 3f, 12f, "Pick up any spawn egg laid by a chicken."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.PIG_SPAWN_EGG, "(DISABLED)Egguse me!?", AdvancementFrameType.TASK, true, true, 3f, 12f, "Pick up any spawn egg laid by a chicken."), parent, 1);
   }
 }

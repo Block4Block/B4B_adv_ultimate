@@ -14,6 +14,6 @@ public class B4b_breakwithingraceperiod extends BaseAdvancement  {
 
 
   public B4b_breakwithingraceperiod(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.CLOCK, "A Gracious Period", AdvancementFrameType.TASK, true, true, 1f, 2f , "Break a newly placed block within the grace period to avoid spending a block. (default: 5 sec.)"), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.CLOCK, "(DISABLED)A Gracious Period", AdvancementFrameType.TASK, true, true, 1f, 2f , "Break a newly placed block within the grace period to avoid spending a block. (default: 5 sec.)"), parent, 1);
   }
 }

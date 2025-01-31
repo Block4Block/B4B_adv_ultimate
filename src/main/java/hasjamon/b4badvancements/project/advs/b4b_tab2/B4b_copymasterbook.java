@@ -14,6 +14,6 @@ public class B4b_copymasterbook extends BaseAdvancement  {
 
 
   public B4b_copymasterbook(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.ENCHANTED_BOOK, "Copy That!", AdvancementFrameType.TASK, true, true, 6f, 8f, "Create a copy of a Master Book."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.ENCHANTED_BOOK, "(DISABLED)Copy That!", AdvancementFrameType.TASK, true, true, 6f, 8f, "Create a copy of a Master Book."), parent, 1);
   }
 }

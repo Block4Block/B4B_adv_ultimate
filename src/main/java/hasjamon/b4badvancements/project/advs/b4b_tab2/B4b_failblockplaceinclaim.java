@@ -14,6 +14,6 @@ public class B4b_failblockplaceinclaim extends BaseAdvancement  {
 
 
   public B4b_failblockplaceinclaim(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.WARPED_SIGN, "Access Denied", AdvancementFrameType.TASK, true, true, 6f, 4f, "Attempt to place a block inside a claim you're intruding on."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.WARPED_SIGN, "(DISABLED)Access Denied", AdvancementFrameType.TASK, true, true, 6f, 4f, "Attempt to place a block inside a claim you're intruding on."), parent, 1);
   }
 }

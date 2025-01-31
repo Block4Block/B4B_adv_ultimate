@@ -14,6 +14,6 @@ public class B4b_standcenteroverworld extends BaseAdvancement  {
 
 
   public B4b_standcenteroverworld(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.LEATHER_BOOTS, "Central Hub", AdvancementFrameType.TASK, true, true, 2f, 7f, "Travel to the center of the Overworld."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.LEATHER_BOOTS, "(DISABLED)Central Hub", AdvancementFrameType.TASK, true, true, 2f, 7f, "Travel to the center of the Overworld."), parent, 1);
   }
 }

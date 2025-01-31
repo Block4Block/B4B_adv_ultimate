@@ -14,6 +14,6 @@ public class B4b_hitdripstonewithtrident extends BaseAdvancement  {
 
 
   public B4b_hitdripstonewithtrident(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.POINTED_DRIPSTONE, "Pointy Trident", AdvancementFrameType.TASK, true, true, 4f, 12f, "You broke pointed dripstone with a thrown trident. Nice!"), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.POINTED_DRIPSTONE, "(DISABLED)Pointy Trident", AdvancementFrameType.TASK, true, true, 4f, 12f, "You broke pointed dripstone with a thrown trident. Nice!"), parent, 1);
   }
 }

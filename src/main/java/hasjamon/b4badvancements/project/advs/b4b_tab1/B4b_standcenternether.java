@@ -14,6 +14,6 @@ public class B4b_standcenternether extends BaseAdvancement  {
 
 
   public B4b_standcenternether(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.NETHERITE_BOOTS, "Ground Zero", AdvancementFrameType.TASK, true, true, 3f, 14f, "Travel to the center of the Nether."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.NETHERITE_BOOTS, "(DISABLED)Ground Zero", AdvancementFrameType.TASK, true, true, 3f, 14f, "Travel to the center of the Nether."), parent, 1);
   }
 }

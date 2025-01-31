@@ -14,6 +14,6 @@ public class B4b_claim250chunks extends BaseAdvancement  {
 
 
   public B4b_claim250chunks(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.GRANITE_WALL, "Earl", AdvancementFrameType.TASK, true, true, 10f, 6f, "Own 250 claims."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.GRANITE_WALL, "(DISABLED)Earl", AdvancementFrameType.TASK, true, true, 10f, 6f, "Own 250 claims."), parent, 1);
   }
 }
