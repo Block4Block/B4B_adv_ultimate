@@ -7,6 +7,11 @@ import com.fren_gor.ultimateAdvancementAPI.advancement.BaseAdvancement;
 import org.bukkit.Material;
 import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementFrameType;
 import com.fren_gor.ultimateAdvancementAPI.advancement.Advancement;
+import org.bukkit.entity.Enderman;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.Skeleton;
+import org.bukkit.event.entity.EntityDeathEvent;
+import org.bukkit.inventory.ItemStack;
 
 public class B4b_killendermangetgrass extends BaseAdvancement  {
 
@@ -15,5 +20,19 @@ public class B4b_killendermangetgrass extends BaseAdvancement  {
 
   public B4b_killendermangetgrass(Advancement parent) {
     super(KEY.getKey(), new AdvancementDisplay(Material.GRASS_BLOCK, "Helping Hand", AdvancementFrameType.TASK, true, true, 3f, 15f, "Obtain a grass block from an Enderman."), parent, 1);
+
+    registerEvent(EntityDeathEvent.class, (event) -> {
+      if (event.getEntity() instanceof Enderman) {
+        Player killer = event.getEntity().getKiller();
+        if (killer != null) {
+          for (ItemStack item : event.getDrops()) {
+            if (item.getType() == Material.GRASS_BLOCK) {
+              incrementProgression(killer);
+              break;
+            }
+          }
+        }
+      }
+    });
   }
 }
