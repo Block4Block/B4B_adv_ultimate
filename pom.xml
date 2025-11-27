@@ -6,7 +6,7 @@
 
     <groupId>hasjamon.block4block</groupId>
     <artifactId>B4BAdvancements</artifactId>
-    <version>4.1-SNAPSHOT</version>
+    <version>4.4-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
