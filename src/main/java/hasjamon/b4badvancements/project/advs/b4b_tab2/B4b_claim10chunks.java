@@ -6,7 +6,9 @@ import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementDispla
 import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementFrameType;
 import com.fren_gor.ultimateAdvancementAPI.util.AdvancementKey;
 import hasjamon.b4badvancements.project.advs.AdvancementTabNamespaces;
+import hasjamon.block4block.events.PlayerClaimsCountedEvent;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 
 public class B4b_claim10chunks extends BaseAdvancement  {
 
@@ -14,6 +16,13 @@ public class B4b_claim10chunks extends BaseAdvancement  {
 
 
   public B4b_claim10chunks(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.BIRCH_PLANKS, "(DISABLED)Landlord", AdvancementFrameType.TASK, true, true, 6f, 6f, "Own 10 claims."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.BIRCH_PLANKS, "Landlord", AdvancementFrameType.TASK, true, true, 6f, 6f, "Own 10 claims."), parent, 1);
+    registerEvent(PlayerClaimsCountedEvent.class, (e) -> {
+      Player p = e.player;
+
+      if (e.numClaims >= 10) {
+        incrementProgression(p);
+      }
+    });
   }
 }

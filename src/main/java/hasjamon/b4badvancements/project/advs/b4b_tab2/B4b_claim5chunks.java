@@ -7,6 +7,8 @@ import com.fren_gor.ultimateAdvancementAPI.advancement.BaseAdvancement;
 import org.bukkit.Material;
 import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementFrameType;
 import com.fren_gor.ultimateAdvancementAPI.advancement.Advancement;
+import org.bukkit.entity.Player;
+import hasjamon.block4block.events.PlayerClaimsCountedEvent;
 
 public class B4b_claim5chunks extends BaseAdvancement  {
 
@@ -14,6 +16,15 @@ public class B4b_claim5chunks extends BaseAdvancement  {
 
 
   public B4b_claim5chunks(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.BIRCH_PLANKS, "(DISABLED)House Owner", AdvancementFrameType.TASK, true, true, 6f, 6f, "Own 5 claims."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.BIRCH_PLANKS, "House Owner", AdvancementFrameType.TASK, true, true, 6f, 6f, "Own 5 claims."), parent, 1);
+
+    registerEvent(PlayerClaimsCountedEvent.class, (e) -> {
+      Player p = e.player;
+
+      // Grant advancement if player is a member of 5 or more claims
+      if (e.numClaims >= 5) {
+        incrementProgression(p);
+      }
+    });
   }
 }
