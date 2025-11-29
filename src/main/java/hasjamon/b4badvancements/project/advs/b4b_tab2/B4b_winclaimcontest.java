@@ -7,6 +7,8 @@ import com.fren_gor.ultimateAdvancementAPI.advancement.BaseAdvancement;
 import org.bukkit.Material;
 import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementFrameType;
 import com.fren_gor.ultimateAdvancementAPI.advancement.Advancement;
+import org.bukkit.entity.Player;
+import hasjamon.block4block.events.ClaimContestOverEvent;
 
 public class B4b_winclaimcontest extends BaseAdvancement  {
 
@@ -14,6 +16,11 @@ public class B4b_winclaimcontest extends BaseAdvancement  {
 
 
   public B4b_winclaimcontest(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.GOLDEN_HELMET, "(DISABLED)Claim Contest Champion", AdvancementFrameType.TASK, true, true, 7f, 0f, "Win a Claim Contest"), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.GOLDEN_HELMET, "Claim Contest Champion", AdvancementFrameType.TASK, true, true, 7f, 0f, "Win a Claim Contest"), parent, 1);
+
+    registerEvent(ClaimContestOverEvent.class, (e) -> {
+      Player p = e.winner;
+      incrementProgression(p);
+    });
   }
 }
