@@ -7,6 +7,8 @@ import com.fren_gor.ultimateAdvancementAPI.advancement.BaseAdvancement;
 import org.bukkit.Material;
 import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementFrameType;
 import com.fren_gor.ultimateAdvancementAPI.advancement.Advancement;
+import org.bukkit.entity.Player;
+import hasjamon.block4block.events.ClaimMapCreatedEvent;
 
 public class B4b_createclaimmap extends BaseAdvancement  {
 
@@ -14,6 +16,11 @@ public class B4b_createclaimmap extends BaseAdvancement  {
 
 
   public B4b_createclaimmap(Advancement parent) {
-    super(KEY.getKey(), new AdvancementDisplay(Material.FILLED_MAP, "(DISABLED)Borderline Mapping", AdvancementFrameType.TASK, true, true, 6f, 5f, "Use a map on a lectern to create a claim map."), parent, 1);
+    super(KEY.getKey(), new AdvancementDisplay(Material.FILLED_MAP, "Borderline Mapping", AdvancementFrameType.TASK, true, true, 6f, 5f, "Use a map on a lectern to create a claim map."), parent, 1);
+
+    registerEvent(ClaimMapCreatedEvent.class, (e) -> {
+      Player p = e.player;
+      incrementProgression(p);
+    });
   }
 }
