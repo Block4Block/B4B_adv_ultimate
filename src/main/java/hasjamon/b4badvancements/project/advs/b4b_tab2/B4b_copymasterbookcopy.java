@@ -9,6 +9,8 @@ import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementFrameT
 import com.fren_gor.ultimateAdvancementAPI.advancement.Advancement;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.CraftItemEvent;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
 
@@ -26,32 +28,28 @@ public class B4b_copymasterbookcopy extends BaseAdvancement  {
       }
 
       Player p = (Player) e.getWhoClicked();
-      ItemStack result = e.getRecipe().getResult();
 
-      // Check if the crafted item is a written book
-      if (result.getType() != Material.WRITTEN_BOOK) {
+      ItemStack result = e.getInventory().getResult();
+
+      if (result == null || result.getType() != Material.WRITTEN_BOOK) {
         return;
       }
 
-      // Check if it has book meta with lore
       if (result.hasItemMeta() && result.getItemMeta() instanceof BookMeta) {
         BookMeta meta = (BookMeta) result.getItemMeta();
 
-        if (meta.hasLore()) {
-          boolean hasCopyOfCopy = false;
-          boolean hasMasterBook = false;
+        // Check generation - "Copy of a copy" is COPY_OF_COPY
+        if (meta.hasGeneration() && meta.getGeneration() == BookMeta.Generation.COPY_OF_COPY) {
+          if (meta.hasLore()) {
+            for (String line : meta.getLore()) {
+              // Strip color codes before checking
+              String strippedLine = line.replaceAll("§[0-9a-fk-or]", "");
 
-          for (String line : meta.getLore()) {
-            if (line.contains("Copy of a copy")) {
-              hasCopyOfCopy = true;
+              if (strippedLine.contains("Master Book") && strippedLine.contains("#")) {
+                incrementProgression(p);
+                return;
+              }
             }
-            if (line.contains("Master Book #")) {
-              hasMasterBook = true;
-            }
-          }
-
-          if (hasCopyOfCopy && hasMasterBook) {
-            incrementProgression(p);
           }
         }
       }

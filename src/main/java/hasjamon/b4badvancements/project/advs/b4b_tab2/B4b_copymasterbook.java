@@ -26,32 +26,28 @@ public class B4b_copymasterbook extends BaseAdvancement  {
       }
 
       Player p = (Player) e.getWhoClicked();
-      ItemStack result = e.getRecipe().getResult();
 
-      // Check if the crafted item is a written book
-      if (result.getType() != Material.WRITTEN_BOOK) {
+      ItemStack result = e.getInventory().getResult();
+
+      if (result == null || result.getType() != Material.WRITTEN_BOOK) {
         return;
       }
 
-      // Check if it has book meta with lore
       if (result.hasItemMeta() && result.getItemMeta() instanceof BookMeta) {
         BookMeta meta = (BookMeta) result.getItemMeta();
 
-        if (meta.hasLore()) {
-          boolean hasCopyOfOriginal = false;
-          boolean hasMasterBook = false;
+        // Check generation - "Copy of original" is COPY_OF_ORIGINAL
+        if (meta.hasGeneration() && meta.getGeneration() == BookMeta.Generation.COPY_OF_ORIGINAL) {
+          if (meta.hasLore()) {
+            for (String line : meta.getLore()) {
+              // Strip color codes before checking
+              String strippedLine = line.replaceAll("§[0-9a-fk-or]", "");
 
-          for (String line : meta.getLore()) {
-            if (line.contains("Copy of original")) {
-              hasCopyOfOriginal = true;
+              if (strippedLine.contains("Master Book") && strippedLine.contains("#")) {
+                incrementProgression(p);
+                return;
+              }
             }
-            if (line.contains("Master Book #")) {
-              hasMasterBook = true;
-            }
-          }
-
-          if (hasCopyOfOriginal && hasMasterBook) {
-            incrementProgression(p);
           }
         }
       }
