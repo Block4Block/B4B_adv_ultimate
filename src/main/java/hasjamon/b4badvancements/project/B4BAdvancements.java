@@ -9,6 +9,7 @@ import com.fren_gor.ultimateAdvancementAPI.events.PlayerLoadingCompletedEvent;
 import hasjamon.b4badvancements.project.advs.AdvancementTabNamespaces;
 import hasjamon.b4badvancements.project.advs.b4b_tab1.*;
 import hasjamon.b4badvancements.project.advs.b4b_tab2.*;
+import hasjamon.block4block.events.B4BlockBreakEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -39,8 +40,19 @@ public class B4BAdvancements extends JavaPlugin implements Listener {
         api = UltimateAdvancementAPI.getInstance(this);
         b4b_tab1 = api.createAdvancementTab(AdvancementTabNamespaces.b4b_tab1_NAMESPACE);
         b4b_tab2 = api.createAdvancementTab(AdvancementTabNamespaces.b4b_tab2_NAMESPACE);
-            RootAdvancement b4b_breakblockfail = new RootAdvancement(b4b_tab1, "b4b_breakblockfail", new AdvancementDisplay(Material.LECTERN, "(DISABLED)A Block for a Block", AdvancementFrameType.TASK, true, true, 0f, 0f , "Some blocks in the world require you to spend a block to break them!"),"textures/block/red_terracotta.png",1);
-            B4b_breaklogsfreely b4b_breaklogsfreely = new B4b_breaklogsfreely(b4b_breakblockfail);
+        RootAdvancement b4b_breakblockfail = new RootAdvancement(b4b_tab1, "b4b_breakblockfail", new AdvancementDisplay(Material.LECTERN, "A Block for a Block", AdvancementFrameType.TASK, true, true, 0f, 0f , "Some blocks in the world require you to spend a block to break them!"),"textures/block/red_terracotta.png",1) {
+            {
+                registerEvent(B4BlockBreakEvent.class, (e) -> {
+                    Player p = e.player;
+
+                    // Only grant if the break failed (didn't have required block)
+                    if (!e.success) {
+                        incrementProgression(p);
+                    }
+                });
+            }
+        };
+        B4b_breaklogsfreely b4b_breaklogsfreely = new B4b_breaklogsfreely(b4b_breakblockfail);
             B4b_killzombiegetcharcoal b4b_killzombiegetcharcoal = new B4b_killzombiegetcharcoal(b4b_breakblockfail);
             B4b_breakwithingraceperiod b4b_breakwithingraceperiod = new B4b_breakwithingraceperiod(b4b_breakblockfail);
             B4b_killpiggetdirt b4b_killpiggetdirt = new B4b_killpiggetdirt(b4b_breakblockfail);
@@ -97,7 +109,18 @@ public class B4BAdvancements extends JavaPlugin implements Listener {
             B4b_standcenternether b4b_standcenternether = new B4b_standcenternether(b4b_standcenteroverworld);
             B4b_standcenterend b4b_standcenterend = new B4b_standcenterend(b4b_standcenternether);
         b4b_tab1.registerAdvancements(b4b_breakblockfail ,b4b_breaklogsfreely ,b4b_killzombiegetcharcoal ,b4b_breakwithingraceperiod ,b4b_killpiggetdirt ,b4b_pickflower ,b4b_fishgetspawnegg ,b4b_killpolarbeargetice ,b4b_pickallflowers ,b4b_pickupmelonslice ,b4b_fishgetrarestuff ,b4b_killmooshroomgetstuff ,b4b_killphantomgetelytra ,b4b_pickcraftalldyes ,b4b_pickuppumpkin ,b4b_pickupcactus ,b4b_breakleavesfreely ,b4b_breakcraftingtablefreely ,b4b_breakbedfreely ,b4b_breaknyliumfreely ,b4b_spreadnylium ,b4b_placeslimespawner ,b4b_breakandesite ,b4b_pickupvaluablerandomdrop ,b4b_killcreeperorwitchgetrocket ,b4b_killskeletongetstone ,b4b_creeperexplodegetgunpowder ,b4b_killendmobgetenditem ,b4b_collectmobhead ,b4b_killwitherskeletongetblackstone ,b4b_breakstone ,b4b_pickupplayerhead ,b4b_collectallmobheads ,b4b_pickupallmobheads ,b4b_disguise ,b4b_pickupspawner ,b4b_placeskeletonspawner ,b4b_lootobsidian ,b4b_lotsofcobblestone ,b4b_smeltcobblestone ,b4b_usenewblastfurnacerecipe ,b4b_pickupfallingblock ,b4b_breakdirt ,b4b_standcenteroverworld ,b4b_killraidergetclay ,b4b_pickupflint ,b4b_pickupspawnegg ,b4b_hitdripstonewithtrident ,b4b_namechicken ,b4b_pickuprarespawnegg ,b4b_pickupsuperrarespawnegg ,b4b_spawnzombiehorse ,b4b_useallspawneggs ,b4b_bedcmd ,b4b_standcenternether ,b4b_standcenterend ,b4b_killendermangetgrass );
-            RootAdvancement b4b_breakblockfailbutfreeinclaim = new RootAdvancement(b4b_tab2, "b4b_breakblockfailbutfreeinclaim", new AdvancementDisplay(Material.ENCHANTED_BOOK, "(DISABLED)Unclaimed Property", AdvancementFrameType.TASK, true, true, 0f, 0f , "Some blocks are free to break, if you have a claim. In this case, you do not."),"textures/block/red_terracotta.png",1);
+        RootAdvancement b4b_breakblockfailbutfreeinclaim = new RootAdvancement(b4b_tab2, "b4b_breakblockfailbutfreeinclaim", new AdvancementDisplay(Material.ENCHANTED_BOOK, "Unclaimed Property", AdvancementFrameType.TASK, true, true, 0f, 0f , "Some blocks are free to break, if you have a claim. In this case, you do not."),"textures/block/red_terracotta.png",1) {
+            {
+                registerEvent(B4BlockBreakEvent.class, (e) -> {
+                    Player p = e.player;
+
+                    // Only grant if the break failed AND it would have been free in a claim
+                    if (!e.success && e.isFreeToBreakInClaim) {
+                        incrementProgression(p);
+                    }
+                });
+            }
+        };
             B4b_pickupsugarcane b4b_pickupsugarcane = new B4b_pickupsugarcane(b4b_breakblockfailbutfreeinclaim);
             B4b_makepaper b4b_makepaper = new B4b_makepaper(b4b_pickupsugarcane);
             B4b_makebook b4b_makebook = new B4b_makebook(b4b_makepaper);
